@@ -1,0 +1,101 @@
+pizza_id,order_id,pizza_name_id,quantity,order_date,order_time,unit_price,total_price,pizza_size,pizza_category,pizza_ingredients,pizza_name
+1,1,hawaiian_m,2,1/1/2023,11:38:36,13.25,26.50,M,Classic,"Sliced Ham, Pineapple, Mozzarella Cheese",The Hawaiian Pizza
+2,2,pepperoni_l,3,1/1/2023,11:57:40,15.00,45.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+3,3,five_cheese_l,1,1/1/2023,12:05:31,18.50,18.50,L,Veggie,"Mozzarella, Provolone, Gouda, Romano, Blue Cheese",The Five Cheese Pizza
+4,4,pepperoni_m,4,1/2/2023,12:08:45,14.00,56.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+5,5,bbq_ckn_m,1,1/2/2023,12:12:10,16.25,16.25,M,Chicken,"BBQ Chicken, Peppers, Onions, BBQ Sauce",The BBQ Chicken Pizza
+6,6,pepperoni_s,5,1/2/2023,12:15:22,12.00,60.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+7,7,classic_dlx_s,2,1/3/2023,12:20:45,14.00,28.00,S,Classic,"Pepperoni, Mushrooms, Onions, Peppers, Bacon",The Classic Deluxe Pizza
+8,8,pepperoni_l,3,1/3/2023,12:30:10,15.00,45.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+9,9,veggie_l,1,1/3/2023,12:45:33,17.00,17.00,L,Veggie,"Mushrooms, Tomatoes, Onions, Peppers, Olives",The Veggie Pizza
+10,10,pepperoni_m,2,1/4/2023,13:05:20,14.00,28.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+11,11,hawaiian_s,1,1/4/2023,13:15:45,11.25,11.25,S,Classic,"Sliced Ham, Pineapple, Mozzarella Cheese",The Hawaiian Pizza
+12,12,pepperoni_s,4,1/4/2023,13:20:10,12.00,48.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+13,13,ital_supr_m,1,1/5/2023,13:30:55,18.50,18.50,M,Supreme,"Pepperoni, Sausage, Mushrooms, Olives, Onions",The Italian Supreme Pizza
+14,14,pepperoni_l,3,1/5/2023,13:45:30,15.00,45.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+15,15,pepperoni_m,2,1/5/2023,14:00:15,14.00,28.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+16,16,classic_dlx_m,1,1/6/2023,14:10:40,16.00,16.00,M,Classic,"Pepperoni, Mushrooms, Onions, Peppers, Bacon",The Classic Deluxe Pizza
+17,17,pepperoni_s,6,1/6/2023,14:20:25,12.00,72.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+18,18,five_cheese_m,1,1/6/2023,14:35:50,16.50,16.50,M,Veggie,"Mozzarella, Provolone, Gouda, Romano, Blue Cheese",The Five Cheese Pizza
+19,19,pepperoni_l,4,1/7/2023,14:45:15,15.00,60.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+20,20,bbq_ckn_l,1,1/7/2023,15:00:30,17.25,17.25,L,Chicken,"BBQ Chicken, Peppers, Onions, BBQ Sauce",The BBQ Chicken Pizza
+21,21,pepperoni_m,3,1/7/2023,15:15:45,14.00,42.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+22,22,hawaiian_m,1,1/8/2023,15:30:20,13.25,13.25,M,Classic,"Sliced Ham, Pineapple, Mozzarella Cheese",The Hawaiian Pizza
+23,23,pepperoni_s,5,1/8/2023,15:45:35,12.00,60.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+24,24,veggie_m,1,1/8/2023,16:00:50,15.00,15.00,M,Veggie,"Mushrooms, Tomatoes, Onions, Peppers, Olives",The Veggie Pizza
+25,25,pepperoni_l,2,1/9/2023,16:15:05,15.00,30.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+26,26,ital_supr_l,1,1/9/2023,16:30:40,20.50,20.50,L,Supreme,"Pepperoni, Sausage, Mushrooms, Olives, Onions",The Italian Supreme Pizza
+27,27,pepperoni_m,4,1/9/2023,16:45:55,14.00,56.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+28,28,classic_dlx_s,2,1/10/2023,17:00:10,14.00,28.00,S,Classic,"Pepperoni, Mushrooms, Onions, Peppers, Bacon",The Classic Deluxe Pizza
+29,29,pepperoni_s,3,1/10/2023,17:15:25,12.00,36.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+30,30,five_cheese_s,1,1/10/2023,17:30:50,13.50,13.50,S,Veggie,"Mozzarella, Provolone, Gouda, Romano, Blue Cheese",The Five Cheese Pizza
+31,31,pepperoni_l,5,1/11/2023,17:45:15,15.00,75.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+32,32,bbq_ckn_m,1,1/11/2023,18:00:40,16.25,16.25,M,Chicken,"BBQ Chicken, Peppers, Onions, BBQ Sauce",The BBQ Chicken Pizza
+33,33,pepperoni_m,2,1/11/2023,18:15:55,14.00,28.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+34,34,hawaiian_l,1,1/12/2023,18:30:20,15.25,15.25,L,Classic,"Sliced Ham, Pineapple, Mozzarella Cheese",The Hawaiian Pizza
+35,35,pepperoni_s,4,1/12/2023,18:45:35,12.00,48.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+36,36,veggie_l,1,1/12/2023,19:00:50,17.00,17.00,L,Veggie,"Mushrooms, Tomatoes, Onions, Peppers, Olives",The Veggie Pizza
+37,37,pepperoni_l,3,1/13/2023,19:15:05,15.00,45.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+38,38,classic_dlx_m,1,1/13/2023,19:30:40,16.00,16.00,M,Classic,"Pepperoni, Mushrooms, Onions, Peppers, Bacon",The Classic Deluxe Pizza
+39,39,pepperoni_m,6,1/13/2023,19:45:55,14.00,84.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+40,40,ital_supr_m,1,1/14/2023,20:00:10,18.50,18.50,M,Supreme,"Pepperoni, Sausage, Mushrooms, Olives, Onions",The Italian Supreme Pizza
+41,41,pepperoni_s,2,1/14/2023,20:15:25,12.00,24.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+42,42,five_cheese_m,1,1/14/2023,20:30:50,16.50,16.50,M,Veggie,"Mozzarella, Provolone, Gouda, Romano, Blue Cheese",The Five Cheese Pizza
+43,43,pepperoni_l,4,1/15/2023,20:45:15,15.00,60.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+44,44,bbq_ckn_l,1,1/15/2023,21:00:40,17.25,17.25,L,Chicken,"BBQ Chicken, Peppers, Onions, BBQ Sauce",The BBQ Chicken Pizza
+45,45,pepperoni_m,3,1/15/2023,21:15:55,14.00,42.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+46,46,hawaiian_s,2,1/16/2023,21:30:20,11.25,22.50,S,Classic,"Sliced Ham, Pineapple, Mozzarella Cheese",The Hawaiian Pizza
+47,47,pepperoni_s,5,1/16/2023,21:45:35,12.00,60.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+48,48,veggie_m,1,1/16/2023,22:00:50,15.00,15.00,M,Veggie,"Mushrooms, Tomatoes, Onions, Peppers, Olives",The Veggie Pizza
+49,49,pepperoni_l,2,1/17/2023,22:15:05,15.00,30.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+50,50,classic_dlx_s,1,1/17/2023,22:30:40,14.00,14.00,S,Classic,"Pepperoni, Mushrooms, Onions, Peppers, Bacon",The Classic Deluxe Pizza
+51,51,pepperoni_m,4,1/17/2023,22:45:55,14.00,56.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+52,52,ital_supr_l,1,1/18/2023,23:00:10,20.50,20.50,L,Supreme,"Pepperoni, Sausage, Mushrooms, Olives, Onions",The Italian Supreme Pizza
+53,53,pepperoni_s,3,1/18/2023,23:15:25,12.00,36.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+54,54,five_cheese_s,1,1/18/2023,23:30:50,13.50,13.50,S,Veggie,"Mozzarella, Provolone, Gouda, Romano, Blue Cheese",The Five Cheese Pizza
+55,55,pepperoni_l,6,1/19/2023,23:45:15,15.00,90.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+56,56,bbq_ckn_m,1,2/1/2023,10:00:40,16.25,16.25,M,Chicken,"BBQ Chicken, Peppers, Onions, BBQ Sauce",The BBQ Chicken Pizza
+57,57,pepperoni_m,2,2/1/2023,10:15:55,14.00,28.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+58,58,hawaiian_m,1,2/2/2023,10:30:20,13.25,13.25,M,Classic,"Sliced Ham, Pineapple, Mozzarella Cheese",The Hawaiian Pizza
+59,59,pepperoni_s,4,2/2/2023,10:45:35,12.00,48.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+60,60,veggie_l,1,2/2/2023,11:00:50,17.00,17.00,L,Veggie,"Mushrooms, Tomatoes, Onions, Peppers, Olives",The Veggie Pizza
+61,61,pepperoni_l,3,2/3/2023,11:15:05,15.00,45.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+62,62,classic_dlx_m,1,2/3/2023,11:30:40,16.00,16.00,M,Classic,"Pepperoni, Mushrooms, Onions, Peppers, Bacon",The Classic Deluxe Pizza
+63,63,pepperoni_m,5,2/3/2023,11:45:55,14.00,70.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+64,64,ital_supr_m,1,2/4/2023,12:00:10,18.50,18.50,M,Supreme,"Pepperoni, Sausage, Mushrooms, Olives, Onions",The Italian Supreme Pizza
+65,65,pepperoni_s,2,2/4/2023,12:15:25,12.00,24.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+66,66,five_cheese_m,1,2/4/2023,12:30:50,16.50,16.50,M,Veggie,"Mozzarella, Provolone, Gouda, Romano, Blue Cheese",The Five Cheese Pizza
+67,67,pepperoni_l,4,2/5/2023,12:45:15,15.00,60.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+68,68,bbq_ckn_l,1,2/5/2023,13:00:40,17.25,17.25,L,Chicken,"BBQ Chicken, Peppers, Onions, BBQ Sauce",The BBQ Chicken Pizza
+69,69,pepperoni_m,3,2/5/2023,13:15:55,14.00,42.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+70,70,hawaiian_s,2,2/6/2023,13:30:20,11.25,22.50,S,Classic,"Sliced Ham, Pineapple, Mozzarella Cheese",The Hawaiian Pizza
+71,71,pepperoni_s,5,2/6/2023,13:45:35,12.00,60.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+72,72,veggie_m,1,2/6/2023,14:00:50,15.00,15.00,M,Veggie,"Mushrooms, Tomatoes, Onions, Peppers, Olives",The Veggie Pizza
+73,73,pepperoni_l,2,2/7/2023,14:15:05,15.00,30.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+74,74,classic_dlx_s,1,2/7/2023,14:30:40,14.00,14.00,S,Classic,"Pepperoni, Mushrooms, Onions, Peppers, Bacon",The Classic Deluxe Pizza
+75,75,pepperoni_m,4,2/7/2023,14:45:55,14.00,56.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+76,76,ital_supr_l,1,2/8/2023,15:00:10,20.50,20.50,L,Supreme,"Pepperoni, Sausage, Mushrooms, Olives, Onions",The Italian Supreme Pizza
+77,77,pepperoni_s,3,2/8/2023,15:15:25,12.00,36.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+78,78,five_cheese_s,1,2/8/2023,15:30:50,13.50,13.50,S,Veggie,"Mozzarella, Provolone, Gouda, Romano, Blue Cheese",The Five Cheese Pizza
+79,79,pepperoni_l,6,2/9/2023,15:45:15,15.00,90.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+80,80,bbq_ckn_m,1,2/9/2023,16:00:40,16.25,16.25,M,Chicken,"BBQ Chicken, Peppers, Onions, BBQ Sauce",The BBQ Chicken Pizza
+81,81,pepperoni_m,2,2/9/2023,16:15:55,14.00,28.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+82,82,hawaiian_m,1,2/10/2023,16:30:20,13.25,13.25,M,Classic,"Sliced Ham, Pineapple, Mozzarella Cheese",The Hawaiian Pizza
+83,83,pepperoni_s,4,2/10/2023,16:45:35,12.00,48.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+84,84,veggie_l,1,2/10/2023,17:00:50,17.00,17.00,L,Veggie,"Mushrooms, Tomatoes, Onions, Peppers, Olives",The Veggie Pizza
+85,85,pepperoni_l,3,2/11/2023,17:15:05,15.00,45.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+86,86,classic_dlx_m,1,2/11/2023,17:30:40,16.00,16.00,M,Classic,"Pepperoni, Mushrooms, Onions, Peppers, Bacon",The Classic Deluxe Pizza
+87,87,pepperoni_m,5,2/11/2023,17:45:55,14.00,70.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+88,88,ital_supr_m,1,2/12/2023,18:00:10,18.50,18.50,M,Supreme,"Pepperoni, Sausage, Mushrooms, Olives, Onions",The Italian Supreme Pizza
+89,89,pepperoni_s,2,2/12/2023,18:15:25,12.00,24.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+90,90,five_cheese_m,1,2/12/2023,18:30:50,16.50,16.50,M,Veggie,"Mozzarella, Provolone, Gouda, Romano, Blue Cheese",The Five Cheese Pizza
+91,91,pepperoni_l,4,2/13/2023,18:45:15,15.00,60.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+92,92,bbq_ckn_l,1,2/13/2023,19:00:40,17.25,17.25,L,Chicken,"BBQ Chicken, Peppers, Onions, BBQ Sauce",The BBQ Chicken Pizza
+93,93,pepperoni_m,3,2/13/2023,19:15:55,14.00,42.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+94,94,hawaiian_s,2,2/14/2023,19:30:20,11.25,22.50,S,Classic,"Sliced Ham, Pineapple, Mozzarella Cheese",The Hawaiian Pizza
+95,95,pepperoni_s,5,2/14/2023,19:45:35,12.00,60.00,S,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+96,96,veggie_m,1,2/14/2023,20:00:50,15.00,15.00,M,Veggie,"Mushrooms, Tomatoes, Onions, Peppers, Olives",The Veggie Pizza
+97,97,pepperoni_l,2,2/15/2023,20:15:05,15.00,30.00,L,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+98,98,classic_dlx_s,1,2/15/2023,20:30:40,14.00,14.00,S,Classic,"Pepperoni, Mushrooms, Onions, Peppers, Bacon",The Classic Deluxe Pizza
+99,99,pepperoni_m,4,2/15/2023,20:45:55,14.00,56.00,M,Classic,"Pepperoni, Mozzarella Cheese",The Pepperoni Pizza
+100,100,ital_supr_l,1,2/16/2023,21:00:10,20.50,20.50,L,Supreme,"Pepperoni, Sausage, Mushrooms, Olives, Onions",The Italian Supreme Pizza
