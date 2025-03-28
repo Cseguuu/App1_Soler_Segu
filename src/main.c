@@ -22,8 +22,15 @@ int main(int argc, char* argv[]) {
     // Definir mapeo de métricas
     struct MetricMapping metrics[] = {
         {"pms", pizza_mas_vendida},
-        {"pls", pizza_menos_vendida}
-        // Agregar más métricas aquí
+        {"pls", pizza_menos_vendida},
+        {"dms", fecha_mas_ventas_dinero},
+        {"dls", fecha_menos_ventas_dinero},
+        {"dmsp", fecha_mas_ventas_pizzas},
+        {"dlsp", fecha_menos_ventas_pizzas},
+        {"apo", promedio_pizzas_orden},
+        {"apd", promedio_pizzas_dia},
+        {"ims", ingrediente_mas_vendido},
+        {"hp", pizzas_por_categoria}
     };
     int num_metrics = sizeof(metrics) / sizeof(metrics[0]);
 
