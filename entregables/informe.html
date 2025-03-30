@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informe Técnico del Proyecto de Análisis de Pedidos de Pizza</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset y configuración base */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.6;
+        background-color: #f8f9fa;
+        color: #343a40;
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      header {
+        background-color: #00529b;
+        color: #ffffff;
+        padding: 30px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .header-content {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+      }
+      header h1 {
+        margin-bottom: 10px;
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+      nav {
+        background-color: #fff;
+        margin: 0;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        z-index: 100;
+      }
+      nav .container {
+        overflow-x: auto;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        min-width: min-content;
+      }
+      nav ul li {
+        margin: 5px 15px;
+        white-space: nowrap;
+      }
+      nav ul li a {
+        color: #00529b;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        padding: 5px 0;
+        position: relative;
+      }
+      nav ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #00529b;
+        transition: width 0.3s ease;
+      }
+      nav ul li a:hover::after {
+        width: 100%;
+      }
+      main {
+        padding: 40px 0;
+      }
+      h2 {
+        color: #00529b;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #00529b;
+        padding-bottom: 10px;
+        font-size: 1.8rem;
+      }
+      p {
+        margin: 16px 0;
+        font-size: 1rem;
+      }
+      ul {
+        margin: 16px 0 16px 20px;
+      }
+      ul li {
+        margin-bottom: 8px;
+      }
+      pre {
+        background-color: #e9ecef;
+        padding: 15px;
+        overflow-x: auto;
+        border-radius: 8px;
+        margin: 16px 0;
+        border-left: 4px solid #00529b;
+      }
+      code {
+        font-family: Consolas, Monaco, "Andale Mono", monospace;
+        font-size: 0.95em;
+      }
+      .diagrama {
+        text-align: center;
+        margin: 30px 0;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .content-section {
+        margin-bottom: 60px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      footer {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+      /* Estilo para los enlaces de anclaje - scrolling suave */
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 70px; /* Ajuste para la barra de navegación fija */
+      }
+      /* Estilos para resaltar los elementos strong */
+      strong {
+        color: #00529b;
+        font-weight: 600;
+      }
+      /* Estilos para pantallas pequeñas */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+        header p {
+          font-size: 1rem;
+        }
+        .content-section {
+          padding: 20px;
+        }
+        nav {
+          padding: 10px 0;
+        }
+      }
+      /* Añadir un efecto de hover a las secciones */
+      .content-section:hover {
+        transform: translateY(-2px);
+        transition: transform 0.3s ease;
+      }
+      /* Animación para cargar las secciones */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .content-section {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+      .content-section:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .content-section:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .content-section:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .content-section:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .content-section:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+      .content-section:nth-child(6) {
+        animation-delay: 0.6s;
+      }
+      .content-section:nth-child(7) {
+        animation-delay: 0.7s;
+      }
+      /* Estilo del botón para subir */
+      #scrollToTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #00529b;
+        color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        z-index: 200;
+      }
+      #scrollToTopBtn:hover {
+        background-color: #003f7f;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Informe Técnico del Proyecto de Análisis de Pedidos de Pizza</h1>
+        <p>Optimización, escalabilidad y buenas prácticas en C</p>
+      </div>
+    </header>
+
+    <nav>
+      <div class="container">
+        <ul>
+          <li><a href="#organizacion">Organización del Código</a></li>
+          <li><a href="#estructuras">Estructuras de Datos</a></li>
+          <li><a href="#modularidad">Modularidad</a></li>
+          <li><a href="#punteros">Punteros a Funciones</a></li>
+          <li><a href="#diagrama">Diagrama de Flujo</a></li>
+          <li><a href="#interaccion">Interacción entre Archivos</a></li>
+          <li><a href="#recursos">Recursos Externos</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <section id="organizacion" class="content-section">
+          <h2>1. Organización del Código</h2>
+          <p>
+            El proyecto se ha organizado siguiendo una estructura de carpetas
+            convencional para proyectos en C, facilitando la localización y el
+            mantenimiento del código. La estructura es la siguiente:
+          </p>
+          <ul>
+            <li>
+              <strong>include/</strong> – Contiene los headers (<code>.h</code>)
+              con las declaraciones de funciones y definiciones de estructuras
+              de datos.
+            </li>
+            <li>
+              <strong>src/</strong> – Alberga el código fuente (<code>.c</code>)
+              con la implementación, incluyendo módulos como
+              <code>main.c</code>, <code>csv_parser.c</code> y
+              <code>metrics.c</code>.
+            </li>
+            <li>
+              <strong>test/</strong> – Incluye los datos de prueba, por ejemplo,
+              el archivo CSV utilizado para verificar el funcionamiento del
+              programa.
+            </li>
+          </ul>
+          <p>
+            Esta división en carpetas permite una mayor claridad en la gestión y
+            escalabilidad del proyecto, facilitando futuras mejoras y
+            mantenimientos.
+          </p>
+        </section>
+
+        <section id="estructuras" class="content-section">
+          <h2>2. Estructuras de Datos Empleadas</h2>
+          <p>
+            La estructura principal es <code>Order</code>, la cual representa un
+            pedido individual de pizza. El codigo de la estructura está dado
+            por:
+          </p>
+          <pre><code>typedef struct {
+            double pizza_id;          // Identificador único de pizza
+            double order_id;          // Identificador de orden
+            char pizza_name_id[50];   // Identificador del nombre de pizza
+            double quantity;          // Cantidad de pizzas
+            char order_date[MAX_DATE_LENGTH];  // Fecha de la orden
+            char order_time[20];      // Hora de la orden
+            double unit_price;        // Precio unitario
+            double total_price;       // Precio total
+            char pizza_size[10];      // Tamaño de pizza
+            char pizza_category[20];  // Categoría de pizza
+            char pizza_ingredients[MAX_INGREDIENTS][50];  // Lista de ingredientes
+            char pizza_name[MAX_PIZZA_NAME];  // Nombre completo de la pizza
+            int num_ingredients;      // Número de ingredientes
+        } Order;</code></pre>
+          <p>
+            Explicando más en profundidad lo que dicen en los comentarios de
+            cada atributo, podemos ver que los campos representan:
+          </p>
+          <ul>
+            <li>
+              <code>pizza_id y order_id</code>: Identificadores únicos para la
+              pizza y para el pedido, respectivamente.
+            </li>
+            <li>
+              <code>pizza_name_id y pizza_name</code>: Uno puede verse como un
+              identificador para el nombre y el otro como el nombre completo de
+              la pizza.
+            </li>
+            <li><code>quantity</code>: Cantidad de pizzas en el pedido.</li>
+            <li>
+              <code>order_date y order_time</code>: Fecha y hora en que se
+              realizó el pedido.
+            </li>
+
+            <li>
+              <code>unit_price y total_price</code>: Precio unitario y precio
+              total del pedido.
+            </li>
+
+            <li>
+              <code>pizza_size y pizza_category</code>: Información sobre el
+              tamaño y la categoría de la pizza.
+            </li>
+            <li>
+              <code>pizza_ingredients y num_ingredients</code>: Una lista de
+              ingredientes y el número de ingredientes presentes.
+            </li>
+          </ul>
+          <p>
+            Cada instancia de <code>Order</code> corresponde a una fila del
+            archivo CSV, lo que facilita el acceso y manipulación de los datos
+            de cada pedido de forma estructurada y eficiente.
+          </p>
+        </section>
+
+        <section id="modularidad" class="content-section">
+          <h2>3. Modularidad</h2>
+          <p>
+            El código se divide en múltiples módulos, permitiendo que cada uno
+            cumpla una única responsabilidad y facilitando la reutilización y el
+            mantenimiento:
+          </p>
+          <ul>
+            <li>
+              <strong>csv_parser.c</strong>: Se encarga de leer y parsear el
+              archivo CSV, convirtiendo cada línea en una estructura
+              <code>Order</code>.
+            </li>
+            <li>
+              <strong>metrics.c</strong>: Contiene funciones para el cálculo de
+              diversas métricas a partir de los datos obtenidos.
+            </li>
+            <li>
+              <strong>main.c</strong>: Coordina la ejecución del programa,
+              integrando la lectura de datos, el cálculo de métricas y la
+              interacción con el usuario.
+            </li>
+          </ul>
+          <p>
+            Esta separación en módulos ayuda a mantener el código limpio, reduce
+            la dependencia entre componentes y permite incorporar nuevas
+            funcionalidades sin afectar el sistema general.
+          </p>
+        </section>
+
+        <section id="punteros" class="content-section">
+          <h2>4. Uso de Punteros a Funciones</h2>
+          <p>
+            Se ha implementado el uso de punteros a funciones para lograr una
+            mayor flexibilidad y evitar múltiples condicionales al seleccionar
+            la función de métrica a ejecutar. Se utiliza el siguiente typedef:
+          </p>
+          <pre><code>typedef char* (*MetricFunction)(int*, Order*);</code></pre>
+          <p>
+            En <code>main.c</code> se define, por ejemplo, una estructura
+            <code>MetricMapping</code> que asocia el nombre de la métrica con la
+            función correspondiente. Esto permite invocar dinámicamente la
+            función adecuada según la métrica solicitada, haciendo el código más
+            modular y fácil de extender.
+          </p>
+        </section>
+
+        <section id="diagrama" class="content-section">
+          <h2>5. Diagrama de Flujo del Programa</h2>
+          <p>
+            A continuación se presenta el diagrama general del flujo del
+            programa, generado con PlantUML:
+          </p>
+          <div class="diagrama">
+            <img
+              src="diagrama.png"
+              alt="Diagrama de flujo del programa"
+              style="max-width: 100%; height: auto; border-radius: 4px"
+            />
+          </div>
+        </section>
+
+        <section id="interaccion" class="content-section">
+          <h2>6. Interacción entre Archivos</h2>
+          <p>
+            La comunicación entre los distintos módulos se realiza de la
+            siguiente manera:
+          </p>
+          <ul>
+            <li>
+              <strong>De main.c a csv_parser.c:</strong> Se invoca la función de
+              parseo para leer el archivo CSV y almacenar los pedidos en un
+              arreglo de estructuras <code>Order</code>.
+            </li>
+            <li>
+              <strong>De main.c a metrics.c:</strong> Se utiliza una tabla de
+              mapeo que asocia nombres de métricas a sus funciones
+              correspondientes. Dependiendo de la métrica solicitada, se llama a
+              la función adecuada.
+            </li>
+            <li>
+              <strong>Manejo de memoria:</strong> Tanto el arreglo de
+              <code>Order</code> como los resultados de las métricas se
+              gestionan dinámicamente, liberando la memoria al finalizar su uso.
+            </li>
+            <li>
+              <strong>Comunicación mediante headers:</strong> Los archivos
+              <code>.h</code> permiten que <code>main.c</code> conozca las
+              funciones y estructuras definidas en los demás módulos.
+            </li>
+          </ul>
+        </section>
+
+        <section id="recursos" class="content-section">
+          <h2>7. Recursos Externos Utilizados</h2>
+          <p>
+            MEJORAR ESTO Durante el desarrollo del proyecto se consultaron
+            diversas fuentes de apoyo, entre las que se destacan:
+          </p>
+          <ul>
+            <li>
+              <strong>Herramientas de IA:</strong> Se utilizó ChatGPT para
+              definir la estructura modular y resolver dudas relacionadas con
+              punteros a funciones y buenas prácticas en C, se utilizo Claude
+              para blabla.
+            </li>
+            <li>
+              <strong>Documentación oficial y Stack Overflow:</strong> Se
+              consultó la documentación oficial de C y Stack Overflow, para
+              resolver aspectos específicos del parseo CSV y la gestión de
+              memoria, además de validar lo entregado por las herramientas de
+              IA.
+            </li>
+          </ul>
+          <p>
+            Estas fuentes permitieron asegurar que el código cumpla con las
+            buenas prácticas, especificaciones y requerimientos exigidos en las
+            bases del proyecto.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 Grupo Cristobal Segú y Diego Soler</p>
+      </div>
+    </footer>
+
+    <!-- Botón para subir -->
+    <button id="scrollToTopBtn" onclick="scrollToTop()">&#8679;</button>
+
+    <script>
+      // Obtener el botón
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      // Mostrar el botón cuando se hace scroll hacia abajo
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          scrollToTopBtn.style.display = "flex";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      };
+
+      // Función para subir suavemente al inicio
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
