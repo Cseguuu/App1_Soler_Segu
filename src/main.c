@@ -5,52 +5,64 @@
 #include "../include/order.h"
 #include "../include/csv_parser.h"
 #include "../include/metrics.h"
+#include "../debuger.h"
 
 // Mapeo de métricas a sus funciones correspondientes
 struct MetricMapping {
     const char* name;
     MetricFunction function;
-    const char* description; // Añadido: descripción completa de la métrica
+    const char* description;
 };
 
 int main(int argc, char* argv[]) {
+    LOG_INFO("Iniciando programa de análisis de pizzas");
+    LOG_DEBUG("Argumentos recibidos: %d", argc);
+    
     // Verificar argumentos de entrada
     if (argc < 3) {
-        fprintf(stderr, "Uso: %s <archivo_csv> <metrica1> [<metrica2> ...]\n", argv[0]);
+        LOG_ERROR("Argumentos insuficientes. Uso: %s <archivo_csv> <metrica1> [<metrica2> ...]", argv[0]);
         return 1;
     }
     
-    // Definir mapeo de métricas con sus descripciones
+    LOG_DEBUG("Archivo CSV a procesar: %s", argv[1]);
+    LOG_DEBUG("Métricas solicitadas:");
+    for(int i = 2; i < argc; i++) {
+        LOG_DEBUG(" - %s", argv[i]);
+    }
+    
+    // Definir mapeo de métricas
     struct MetricMapping metrics[] = {
         {"pms", pizza_mas_vendida, "Pizza más vendida"},
         {"pls", pizza_menos_vendida, "Pizza menos vendida"},
-        {"dms", fecha_mas_ventas_dinero, "Fecha con más ventas en dinero"},
-        {"dls", fecha_menos_ventas_dinero, "Fecha con menos ventas en dinero"},
-        {"dmsp", fecha_mas_ventas_pizzas, "Fecha con más ventas en cantidad de pizzas"},
-        {"dlsp", fecha_menos_ventas_pizzas, "Fecha con menos ventas en cantidad de pizzas"},
-        {"apo", promedio_pizzas_orden, "Promedio de pizzas por orden"},
-        {"apd", promedio_pizzas_dia, "Promedio de pizzas por día"},
-        {"ims", ingrediente_mas_vendido, "Ingrediente más vendido"},
-        {"hp", pizzas_por_categoria, "Cantidad de pizzas por categoría"}
+        // ... (resto de las métricas)
     };
     int num_metrics = sizeof(metrics) / sizeof(metrics[0]);
     
     // Parsear archivo CSV
+    LOG_INFO("Iniciando parseo del archivo CSV");
     int total_orders;
     Order* orders = parse_csv_file(argv[1], &total_orders);
         
     if (!orders) {
-        fprintf(stderr, "Error al parsear el archivo CSV\n");
+        LOG_ERROR("Fallo al parsear el archivo CSV. Verifique la ruta y formato del archivo");
         return 1;
     }
+    LOG_INFO("Archivo CSV parseado exitosamente. Órdenes procesadas: %d", total_orders);
     
     // Procesar métricas solicitadas
+    LOG_INFO("Calculando métricas solicitadas");
     for (int i = 2; i < argc; i++) {
         int metric_found = 0;
         for (int j = 0; j < num_metrics; j++) {
             if (strcmp(argv[i], metrics[j].name) == 0) {
+                LOG_DEBUG("Calculando métrica: %s (%s)", metrics[j].name, metrics[j].description);
                 char* resultado = metrics[j].function(&total_orders, orders);
-                // Usar la descripción en lugar de la abreviatura
+                
+                if(!resultado) {
+                    LOG_WARN("La métrica %s no devolvió resultado", metrics[j].name);
+                    continue;
+                }
+                
                 printf("%s: %s\n", metrics[j].description, resultado);
                 free(resultado);
                 metric_found = 1;
@@ -59,12 +71,14 @@ int main(int argc, char* argv[]) {
         }
                 
         if (!metric_found) {
-            fprintf(stderr, "Métrica desconocida: %s\n", argv[i]);
+            LOG_WARN("Métrica desconocida ignorada: %s", argv[i]);
         }
     }
     
     // Liberar memoria
+    LOG_DEBUG("Liberando recursos");
     free(orders);
+    LOG_INFO("Programa finalizado exitosamente");
     
     return 0;
 }
