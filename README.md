@@ -2,6 +2,15 @@
 
 Este programa en **C** analiza ventas de pizzas desde un archivo CSV y calcula métricas específicas utilizando punteros a funciones.
 
+---
+
+## 👥 Integrantes
+
+- Cristobal Segú
+- Diego Soler
+
+---
+
 ## 🚀 Cómo Usar
 
 ### Ejecución
@@ -11,6 +20,8 @@ Este programa en **C** analiza ventas de pizzas desde un archivo CSV y calcula m
 #### Ejemplo:
 
 ./app1 test/ventas.csv pms pls dms apo
+
+---
 
 ## 📊 Métricas Implementadas
 
@@ -26,6 +37,8 @@ Este programa en **C** analiza ventas de pizzas desde un archivo CSV y calcula m
 | `apd`  | Promedio de pizzas por día      |
 | `ims`  | Ingrediente más vendido         |
 | `hp`   | Pizzas vendidas por categoría   |
+
+---
 
 ## 📝 Documentación Adicional
 
