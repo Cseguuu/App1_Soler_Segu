@@ -263,14 +263,13 @@
           <h2>1. Organización del Código</h2>
           <p>
             El proyecto se ha organizado siguiendo una estructura de carpetas
-            convencional para proyectos en C, facilitando la localización y el
-            mantenimiento del código. La estructura es la siguiente:
+            convencional para proyectos en C, facilitando la localización y funcionamiento del código al separar claramente la interfaz y la implementación. La estructura es la siguiente:
           </p>
           <ul>
             <li>
               <strong>include/</strong> – Contiene los headers (<code>.h</code>)
               con las declaraciones de funciones y definiciones de estructuras
-              de datos.
+              de datos. 
             </li>
             <li>
               <strong>src/</strong> – Alberga el código fuente (<code>.c</code>)
@@ -286,8 +285,7 @@
           </ul>
           <p>
             Esta división en carpetas permite una mayor claridad en la gestión y
-            escalabilidad del proyecto, facilitando futuras mejoras y
-            mantenimientos.
+            escalabilidad del proyecto, facilitando el entendimiento y desarrollo del mismo.
           </p>
         </section>
 
@@ -348,6 +346,19 @@
             </li>
           </ul>
           <p>
+            Respecto a los tipos de datos utilizados para las distintas métricas se encuentran los siguientes:
+          </p>
+          <ul>
+            <li>
+              <code>Double</code>: para valores númericos: esto permite almacenar números enteros como decimales del CSV.
+            </li>
+            <li>
+              <code>Arrays</code>: De caracteres de tamaño fijo para mantener el orden y flexibilidad.
+            </li>
+            <li><code>Interger</code>: Para cantidades de ingredientes.</li>
+            </li>
+          </ul>
+          <p>
             Cada instancia de <code>Order</code> corresponde a una fila del
             archivo CSV, lo que facilita el acceso y manipulación de los datos
             de cada pedido de forma estructurada y eficiente.
@@ -358,8 +369,7 @@
           <h2>3. Modularidad</h2>
           <p>
             El código se divide en múltiples módulos, permitiendo que cada uno
-            cumpla una única responsabilidad y facilitando la reutilización y el
-            mantenimiento:
+            cumpla una única responsabilidad, facilitando así el trabajo y entendimiento del código:
           </p>
           <ul>
             <li>
@@ -379,7 +389,7 @@
           </ul>
           <p>
             Esta separación en módulos ayuda a mantener el código limpio, reduce
-            la dependencia entre componentes y permite incorporar nuevas
+            la dependencia entre componentes, en donde cada uno tiene su responsabilidad única y bien definida, además permite testear cada modulo independientemente y permite incorporar nuevas
             funcionalidades sin afectar el sistema general.
           </p>
         </section>
@@ -414,6 +424,16 @@
               style="max-width: 100%; height: auto; border-radius: 4px"
             />
           </div>
+          <p>
+            El diagrama de flujo plantea lo siguiente: 
+            <ul><li>1. Inicio: El programa recibe dos argumentos, el archivo CSV y la o las metricas a calcular.</li>
+            <li>2. Apertura del archivo: Se intenta abrir el archivo, si es correcto procede, en el caso contrario da error y termina.</li>
+            <li>3. Procesamiento de CSV: Se usa csv_parser para leer el archivo si es exitoso, almacena los datos en estructuras.</li>
+            <li>4. Validación métrica: Verifica si es valida la métrica ingresada, si no lo es muestra mensaje de error, el caso contrario lo busca en la tabla MetricMapping.
+            <li>5. Cálculo y resultado: llama a la función de la métrica solicitada, recibe el resultado y lo imprime.</li>
+            <li>6. Liberación de memoria: Libera la memoria usada por las estructuras Order y los resultados.</li></ul>
+          <p> </p> 
+          </p>
         </section>
 
         <section id="interaccion" class="content-section">
