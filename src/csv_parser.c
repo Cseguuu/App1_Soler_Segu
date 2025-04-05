@@ -47,11 +47,10 @@ Order* parse_csv_file(const char* filename, int* total_orders) {
 
         Order* current_order = &orders[*total_orders];
         
-        // Encontrar el incio del nombre de la pizza (after the last quote)
+        // Encontrar el incio del nombre de la pizza
         char* pizza_name_start = strrchr(line, '\"');
         if (pizza_name_start) {
-            pizza_name_start += 2; // Move past the quote and comma
-            
+            pizza_name_start += 2; // moverse despues de la cuota y coma            
             // Extraer el nombre de la pizza
             strcpy(current_order->pizza_name, pizza_name_start);
             
