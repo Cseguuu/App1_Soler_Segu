@@ -1,11 +1,10 @@
-// src/csv_parser.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "../include/order.h"
 #include "csv_parser.h"
 
-// Helper function to find the last occurrence of a character
+// Función para encontrar la ultima ocurrencia de un caracter
 char* strrchr(const char* s, int c);
 
 // Función para dividir una línea de CSV en campos
@@ -48,19 +47,19 @@ Order* parse_csv_file(const char* filename, int* total_orders) {
 
         Order* current_order = &orders[*total_orders];
         
-        // Find the start of the pizza name (after the last quote)
+        // Encontrar el incio del nombre de la pizza (after the last quote)
         char* pizza_name_start = strrchr(line, '\"');
         if (pizza_name_start) {
             pizza_name_start += 2; // Move past the quote and comma
             
-            // Extract pizza name (everything after the last quote and comma)
+            // Extraer el nombre de la pizza
             strcpy(current_order->pizza_name, pizza_name_start);
             
-            // Null-terminate the line before the pizza name starts
+        
             *(pizza_name_start - 2) = '\0';
         }
 
-        // Now parse the rest of the fields
+        // Parseo del resto de los campos
         sscanf(line, "%lf,%lf,%[^,],%lf,%[^,],%[^,],%lf,%lf,%[^,],%[^,]",
                &current_order->pizza_id, 
                &current_order->order_id, 
@@ -73,20 +72,19 @@ Order* parse_csv_file(const char* filename, int* total_orders) {
                current_order->pizza_size,
                current_order->pizza_category);
         
-        // The ingredients are in the remaining part before the pizza name
+        
         char* ingredients_start = strchr(line, '\"');
         if (ingredients_start) {
-            ingredients_start++; // Skip the opening quote
+            ingredients_start++;
             char* ingredients_end = strrchr(line, '\"');
             if (ingredients_end) {
-                *ingredients_end = '\0'; // Terminate at closing quote
+                *ingredients_end = '\0'; // terminar al cierre de la cuota
                 
-                // Parse ingredients
+                // Parseo de ingredientes
                 current_order->num_ingredients = 0;
                 char* ingredient_token = strtok(ingredients_start, ",");
                 while (ingredient_token != NULL && 
                        current_order->num_ingredients < MAX_INGREDIENTS) {
-                    // Trim whitespace
                     while (*ingredient_token == ' ') ingredient_token++;
                     strcpy(current_order->pizza_ingredients[current_order->num_ingredients], 
                           ingredient_token);

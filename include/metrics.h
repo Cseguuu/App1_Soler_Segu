@@ -1,5 +1,3 @@
-// Actualizar header con nuevas declaraciones
-// src/metrics.h
 #ifndef METRICS_H
 #define METRICS_H
 

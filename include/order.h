@@ -1,4 +1,3 @@
-// include/order_structure.h
 #ifndef ORDER_STRUCTURE_H
 #define ORDER_STRUCTURE_H
 
@@ -23,4 +22,4 @@ typedef struct {
     int num_ingredients;      // Número de ingredientes
 } Order;
 
-#endif // ORDER_STRUCTURE_H
+#endif 
