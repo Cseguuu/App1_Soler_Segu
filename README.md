@@ -6,8 +6,8 @@ Este programa en **C** analiza ventas de pizzas desde un archivo CSV y calcula m
 
 ## 👥 Integrantes
 
-- Cristobal Segú
-- Diego Soler
+- Cristobal Segú: csegu@alumnos.uai.cl
+- Diego Soler: disoler@alumnos.uai.cl
 
 ---
 
