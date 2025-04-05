@@ -18,4 +18,4 @@ char* promedio_pizzas_dia(int* size, Order* orders);
 char* ingrediente_mas_vendido(int* size, Order* orders);
 char* pizzas_por_categoria(int* size, Order* orders);
 
-#endif // METRICS_H
+#endif
