@@ -253,6 +253,8 @@
           <li><a href="#diagrama">Diagrama de Flujo</a></li>
           <li><a href="#interaccion">Interacción entre Archivos</a></li>
           <li><a href="#recursos">Recursos Externos</a></li>
+          <li><a href="#reflexiones">Reflexiones</a></li>
+
         </ul>
       </div>
     </nav>
@@ -418,12 +420,11 @@
             programa, generado con PlantUML:
           </p>
           <div class="diagrama">
-            <img
-              src="images/diagrama.png"
-              alt="Diagrama de flujo del programa"
-              style="max-width: 100%; height: auto; border-radius: 4px"
-            />
+            <a href="https://github.com/Cseguuu/App1_Soler_Segu/tree/e48f92d2b5571c3bfc548ad3385f7e7e9963fc36/images/diagrama.png" target="_blank">
+              Haz click aquí para ver el diagrama
+            </a>
           </div>
+          
           <p>
             El diagrama de flujo plantea lo siguiente: 
             <ul><li>1. Inicio: El programa recibe dos argumentos, el archivo CSV y la o las metricas a calcular.</li>
@@ -432,8 +433,8 @@
             <li>4. Validación métrica: Verifica si es valida la métrica ingresada, si no lo es muestra mensaje de error, el caso contrario lo busca en la tabla MetricMapping.
             <li>5. Cálculo y resultado: llama a la función de la métrica solicitada, recibe el resultado y lo imprime.</li>
             <li>6. Liberación de memoria: Libera la memoria usada por las estructuras Order y los resultados.</li></ul>
-          <p> </p> 
           </p>
+          Este enfoque modular permite separar responsabilidades, manejar errores de forma temprana y nos facilitó la incorporación de nuevas métricas sin necesidad de alterar la estructura general del código.
         </section>
 
         <section id="interaccion" class="content-section">
@@ -465,35 +466,18 @@
               funciones y estructuras definidas en los demás módulos.
             </li>
           </ul>
+          En resumen, organizar el código en módulos y usar archivos header para definir interfaces claras hace que el sistema sea mucho más fácil de entender y mantener. Cada parte se encarga de algo específico, lo que permite trabajar de manera más ágil y sin complicaciones. Además, manejar la memoria dinámicamente y utilizar un mapeo para las métricas aporta flexibilidad y escalabilidad, ayudándonos a evitar problemas futuros y a hacer cambios sin romper todo el sistema.
         </section>
 
         <section id="recursos" class="content-section">
           <h2>7. Recursos Externos Utilizados</h2>
-          <p>
-            Durante el desarrollo del proyecto se consultaron
-            diversas fuentes de apoyo, entre las que se destacan:
-          </p>
-          <ul>
-            <li>
-              <strong>Herramientas de IA:</strong> Se utilizó ChatGPT para
-              definir la estructura modular y resolver dudas relacionadas con
-              punteros a funciones y buenas prácticas en C, se utilizo Claude
-              para ayudar con la implementación de las funciones y el mayor entendimiento
-              de estás mismas como del funcionamiento del lenguaje en sí.
-            </li>
-            <li>
-              <strong>Documentación oficial y Stack Overflow:</strong> Se
-              consultó la documentación oficial de C y Stack Overflow, para
-              resolver aspectos específicos del parseo CSV y la gestión de
-              memoria, además de validar lo entregado por las herramientas de
-              IA.
-            </li>
-          </ul>
-          <p>
-            Estas fuentes permitieron asegurar que el código cumpla con las
-            buenas prácticas, especificaciones y requerimientos exigidos en las
-            bases del proyecto.
-          </p>
+          Herramientas de Inteligencia Artificial:
+          Se utilizó ChatGPT para definir la estructura modular del proyecto y resolver dudas específicas relacionadas con punteros a funciones y buenas prácticas en C. Además, se empleó Claude para complementar la información técnica necesaria en diversas etapas del desarrollo.
+          
+          Documentación oficial y comunidades en línea:
+          Se consultó la documentación oficial del lenguaje C y se recurrió a plataformas como Stack Overflow para abordar aspectos específicos del parseo de archivos CSV y la gestión de memoria. Estas consultas permitieron validar y enriquecer la información obtenida a través de las herramientas de IA.
+          
+          La integración de estas fuentes de apoyo garantizó que el desarrollo del código se realizara conforme a los estándares técnicos y los requerimientos establecidos en las bases del proyecto.
         </section>
         <section id="reflexiones" class="content-section">
           <h2>8. Reflexiones Finales</h2>
